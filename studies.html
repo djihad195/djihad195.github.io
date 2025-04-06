@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المسار الدراسي | جهاد بن عباس</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #e74c3c;
+            --light: #f8f9fa;
+            --dark: #212529;
+        }
+        
+        body {
+            font-family: 'Tajawal', sans-serif;
+            line-height: 1.8;
+            background-color: #f5f7fa;
+            color: var(--dark);
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+        }
+        
+        .header {
+            text-align: center;
+            padding: 3rem 0;
+            background: linear-gradient(135deg, #3498db, #2c3e50);
+            color: white;
+            border-radius: 15px 15px 0 0;
+            margin-bottom: 2rem;
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .timeline {
+            position: relative;
+            padding-left: 50px;
+            margin: 3rem 0;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 20px;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(to bottom, #9b59b6, #3498db, #e74c3c);
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 40px;
+            padding: 25px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -45px;
+            top: 30px;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            border: 4px solid white;
+            box-shadow: 0 0 0 3px var(--accent);
+            background: var(--accent);
+        }
+        
+        .timeline-item.university::before { background: #e74c3c; box-shadow: 0 0 0 3px #e74c3c; }
+        .timeline-item.highschool::before { background: #3498db; box-shadow: 0 0 0 3px #3498db; }
+        .timeline-item.middle::before { background: #9b59b6; box-shadow: 0 0 0 3px #9b59b6; }
+        .timeline-item.primary::before { background: #2ecc71; box-shadow: 0 0 0 3px #2ecc71; }
+        
+        .timeline-title {
+            color: var(--primary);
+            font-size: 1.5rem;
+            margin-top: 0;
+            display: flex;
+            align-items: center;
+        }
+        
+        .timeline-title i {
+            margin-left: 10px;
+            font-size: 1.8rem;
+        }
+        
+        .timeline-details {
+            color: #666;
+            margin: 1rem 0;
+        }
+        
+        .timeline-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 1.5rem 0;
+        }
+        
+        .meta-item {
+            flex: 1;
+            min-width: 200px;
+            padding: 15px;
+            background: var(--light);
+            border-radius: 10px;
+            text-align: center;
+        }
+        
+        .meta-item h4 {
+            margin: 0 0 10px 0;
+            color: var(--primary);
+        }
+        
+        .meta-item p {
+            margin: 0;
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+        
+        .rating {
+            font-size: 1.3rem;
+            color: var(--accent);
+        }
+        
+        nav {
+            text-align: center;
+            margin-bottom: 2rem;
+            background: var(--primary);
+            padding: 1rem;
+            border-radius: 8px;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+        
+        nav a:hover {
+            background: rgba(255,255,255,0.2);
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <a href="index.html"><i class="fas fa-home"></i> الرئيسية</a>
+            <a href="studies.html"><i class="fas fa-graduation-cap"></i> المسار الدراسي</a>
+            <a href="contact.html"><i class="fas fa-envelope"></i> تواصل معي</a>
+        </nav>
+        
+        <div class="header">
+            <h1><i class="fas fa-graduation-cap"></i> المسار الدراسي</h1>
+            <p>"من الصفر إلى مستقبل طبيب أسنان"</p>
+        </div>
+        
+        <div class="timeline">
+            <!-- المرحلة الجامعية -->
+            <div class="timeline-item university">
+                <h2 class="timeline-title"><i class="fas fa-tooth"></i> المرحلة الجامعية</h2>
+                
+                <div class="timeline-meta">
+                    <div class="meta-item">
+                        <h4><i class="fas fa-university"></i> جامعة عنابة</h4>
+                        <p>دكتوراه في طب الأسنان</p>
+                        <p class="timeline-details">2023 - حتى الآن</p>
+                    </div>
+                    
+                    <div class="meta-item">
+                        <h4><i class="fas fa-university"></i> جامعة خنشلة</h4>
+                        <p>إعلام آلي (نظام LMD)</p>
+                    </div>
+                    
+                    <div class="meta-item">
+                        <h4><i class="fas fa-university"></i> جامعة قسنطينة</h4>
+                        <p>دكتوراه في الطب البيطري</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- المرحلة الثانوية -->
+            <div class="timeline-item highschool">
+                <h2 class="timeline-title"><i class="fas fa-school"></i> المرحلة الثانوية</h2>
+                <p class="timeline-details"><i class="fas fa-map-marker-alt"></i> ثانوية لبح محمد لخضر - خنشلة</p>
+                
+                <div class="timeline-meta">
+                    <div class="meta-item">
+                        <h4>البكالوريا الأولى</h4>
+                        <p class="rating">14.65/20</p>
+                    </div>
+                    
+                    <div class="meta-item">
+                        <h4>البكالوريا الثانية</h4>
+                        <p class="rating">15.18/20</p>
+                    </div>
+                    
+                    <div class="meta-item">
+                        <h4>البكالوريا النهائية</h4>
+                        <p class="rating" style="color: #27ae60;">17.18/20</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- المرحلة المتوسطة -->
+            <div class="timeline-item middle">
+                <h2 class="timeline-title"><i class="fas fa-book-open"></i> المرحلة المتوسطة</h2>
+                <p class="timeline-details"><i class="fas fa-map-marker-alt"></i> متوسطة هواري بومدين - خنشلة</p>
+                
+                <div class="timeline-meta">
+                    <div class="meta-item" style="max-width: 300px; margin: 0 auto;">
+                        <h4>معدل الانتقال</h4>
+                        <p class="rating" style="color: #9b59b6;">16.04/20</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- المرحلة الابتدائية -->
+            <div class="timeline-item primary">
+                <h2 class="timeline-title"><i class="fas fa-pencil-alt"></i> المرحلة الابتدائية</h2>
+                <p class="timeline-details"><i class="fas fa-map-marker-alt"></i> مدرسة التربية والتعليم - خنشلة</p>
+                
+                <div class="timeline-meta">
+                    <div class="meta-item" style="max-width: 300px; margin: 0 auto;">
+                        <h4>معدل الانتقال</h4>
+                        <p class="rating" style="color: #2ecc71;">8.90/10</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
